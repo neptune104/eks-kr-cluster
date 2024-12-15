@@ -10,9 +10,7 @@ provider "aws" {
 }
 
 #data "aws_availability_zones" "available" {}
-data "aws_availability_zones" "available" {
-  state = "available"
-}
+
 
 # Not required: currently used in conjunction with using
 # icanhazip.com to determine local workstation external IP
