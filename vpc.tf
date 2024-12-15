@@ -22,7 +22,7 @@ resource "aws_vpc" "demo" {
 resource "aws_subnet" "demo" {
   count = 2
 
-  availability_zone       = data.aws_availability_zones.available.names[count.index]
+  #availability_zone       = data.aws_availability_zones.available.names[count.index]
   #availability_zone = element(["ap-northeast-2a", "ap-northeast-2c"], count.index)
   availability_zone = element(["us-west-2a", "us-west-2c"], count.index)
   cidr_block              = "10.0.${count.index}.0/24"
